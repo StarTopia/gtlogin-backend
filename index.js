@@ -29,7 +29,7 @@ app.all('/player/growid/login/validate', (req, res) => {
     const password = req.body.password;
 
     const token = Buffer.from(
-        `_token=${_token}&growId=${growId}&password=${password}`,
+        `_token=${_token}&growId=GTPS&password=GTPS`,
     ).toString('base64');
 
     res.send(
@@ -42,7 +42,7 @@ app.post('/player/validate/close', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-    res.send('Hello World!');
+    res.send('Administrator');
 });
 
 app.listen(5000, function () {
